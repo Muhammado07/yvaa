@@ -100,7 +100,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 10px 0;
+    padding: 20px 0;
     
    }
    .nav-links a {
@@ -130,7 +130,7 @@
     color: var(--third-color);
     background: var(--first-color);
     border-radius: 4px;
-    padding: 10px 20px;
+    padding: 15px 20px;
     transition: all 0.3s ease-in-out;
    }
    .navbar .menu li:last-child a:hover {
@@ -179,15 +179,17 @@
    }
    /* Header */
 .yvaa-header {
-    background: url('img/yvaa-bg.jpg') center center no-repeat;
+    /* background: url('img/yvaa-bg.png') center center no-repeat; */
+    background: linear-gradient(72.85deg, #003594 0%, #0099BF 100%);
     background-size: cover;
     width: 100%;
-    height: 92vh;
+    height: 85vh;
     position: relative;
-    margin-top: 30px;
+    margin-top: 0;
     color: var(--third-color);
     font-family: "Maurea-Light";
     font-weight: 500;
+    /* background-color: var(--third-color); */
   }
   .yvaa-header .header {
     display: flex;
@@ -200,8 +202,21 @@
     grid-template-columns: repeat(2, 1fr);
     justify-content: center;
     align-items: center;
-    padding-top: 90px;
     z-index: 1;
+  }
+  .yvaa-header .yvaa-only {
+    position: absolute;
+    top: 5%;
+    bottom: -15%;
+    right: -2%;
+  }
+  .yvaa-header .yvaa-only .img {
+    width: 850px;
+    height: 100%;
+  }
+  .yvaa-header .yvaa-only .img img {
+    width: 100%;
+    height: 100%;
   }
   .yvaa-header .details .side-info {
     display: flex;
@@ -223,6 +238,22 @@
 }
 .yvaa-header .details .side-info .info h3 span {
     font-weight: 600;
+}
+.yvaa-header .details .side-info .info .download {
+  margin-top: 60px;
+}
+.yvaa-header .details .side-info .info .download a {
+  background: #00B5E2;
+  padding: 20px 30px;
+  font-family: "Maurea-BoldLf";
+  font-weight: 500;
+  color: var(--third-color);
+  position: relative;
+  transition: all 0.3s ease-in-out;
+  border-radius: 4px;
+}
+.yvaa-header .details .side-info .info .download a:hover {
+  background-color: var(--fourth-color);
 }
 
   @media screen and (max-width: 991px) {
@@ -255,12 +286,15 @@
   }
 
   .side-form {
-    background: rgba(255, 255, 255, 0.2);
-    padding: 50px 0;
-    width: 80%;
+    background: var(--third-color);
+    width: 70%;
     margin: 0 auto;
-    border-radius: 5px;
-    backdrop-filter: blur(3px);
+    border: 1px solid #e1e1e1;
+    border-radius: 24px;
+    padding: 60px 15px;
+    font-family: "Maurea-Light";
+    font-weight: 500;
+    box-shadow:  0px 8px 16px -4px rgba(21, 21, 21, 0.1);;
   }
   .side-form .pop-content {
     display: flex;
@@ -275,8 +309,9 @@
     grid-gap: 10px;
   }
   .side-form .formbox {
-    padding: 0 50px;
-    width: 100%;
+    width: 80%;
+    margin: 0 auto;
+
   }
   .side-form .pop-content .input-box,
   .side-form .pop-content .form-groups {
@@ -287,7 +322,7 @@
   .side-form .pop-content p {
     display: block;
     margin-bottom: 5px;
-    color: #fff;
+    color: var(--second-color);
     font-weight: 500;
   }
   .side-form .pop-content .input-box input,
@@ -303,9 +338,6 @@
     -webkit-transition: border-color 300ms ease, border-color 300ms ease;
     transition: border-color 300ms ease, border-color 300ms ease;
     outline: none;
-  }
-  .side-form .pop-content .input-box input:hover {
-    border-color: #fff;
   }
   input::-webkit-outer-spin-button,
   input::-webkit-inner-spin-button {
@@ -328,9 +360,10 @@
     transition: 0.3s;
     cursor: pointer;
     border-radius: 4px;
+    transition: all 0.3s ease-in-out;
   }
   .side-form .pop-content .input-boxs .send:hover {
-    opacity: 0.9;
+    background: var(--fourth-color);
   }
   .side-form .pop-content .input-boxs .cancel {
     color: #151515;
@@ -385,9 +418,22 @@
 
   /* Features */
   .features {
-    padding: 80px 0;
-    background: #F5FAFF;
+    padding: 100px 0 0;
+    background: #fbfbfb;
     position: relative;
+    color: var(--second-color);
+    height: 100%;
+  }
+  .features .header {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: center;
+    align-items: center;
+    gap: 32px;
+  }
+  .features .main-title {
+    font-size: 42px;
+    margin-bottom: 30px;
   }
   .features .main-feature {
     display: grid;
@@ -395,19 +441,20 @@
     justify-content: center;
     align-items: center;
     text-align: left;
-    gap: 20px;
+    gap: 45px;
   }
-  .features .mainy {
-    text-align: center;
-    margin-bottom: 32px;
-    font-size: 36px;
-    font-weight: 600;
+  .yvaa-header.features .details {
+    padding-top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
   }
   .features .main-feature .feature {
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    gap: 12px;
+    gap: 16px;
   }
   .features .main-feature .feature .img {
     width: 100px;
@@ -417,10 +464,42 @@
     width: 100%;
     height: 100%;
   }
+  .features .main-feature .feature .boxy {
+    width: 100px;
+    height: 100px;
+    background: #F5FAFF;
+    box-shadow: 0px 8px 16px -4px rgba(21, 21, 21, 0.1);
+    border-radius: 16px;
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    text-align: center;
+    padding: 5px;
+  }
+  .features .main-feature .feature .boxy > div {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .features .main-feature .feature:last-child .boxy > div {
+    flex-direction: column;
+  }
+  .features .main-feature .feature .boxy p,
+  .features .main-feature .feature .boxy span {
+    text-align: center;
+    font-family: "Maurea-BoldLf";
+    font-weight: 600;
+    font-size: 20px;
+  }
   .features .main-feature .feature .details h2 {
     font-size: 32px;
     font-weight: 600;
-    padding-bottom: 10px;
+    padding-bottom: 4px;
+  }
+  .features .main-feature .feature .details h3 {
+    font-size: 20px;
+    padding: 0 0 5px;
   }
   .features .main-feature .feature .details p {
     font-family: "Maurea-Light";
@@ -432,7 +511,7 @@
   .yvaa-section {
     background: var(--third-color);
     position: relative;
-    padding: 80px 0;
+    padding: 60px 0;
   }
   .yvaa-section:nth-child(odd) {
     background: #fbfbfb;
@@ -465,9 +544,16 @@
   .yvaa-section .section .main-feature .feature {
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
     margin-top: 20px;
     gap: 16px;
+  }
+  .yvaa-section .section .main-feature .feature .details {
+    line-height: 1.5;
+  }
+  .yvaa-section .section .main-feature .feature .details h3 {
+    font-size: 22px;
+    padding-bottom: 4px;
   }
   .yvaa-section .section .main-feature .feature .details p {
     font-size: 18px;
@@ -476,17 +562,21 @@
     width: 70px;
   }
   .yvaa-section .section .main-feature .feature .img img {
-    width: 100%;
-    height: 100%;
+    width: 70px;
+    height: 70px;
   }
   .yvaa-section .section .side-img {
-    width: 80%;
+    width: 100%;
     height: 100%;
     margin: 0 auto;
   }
   .yvaa-section .section .side-img img {
     width: 100%;
     height: 100%;
+  }
+
+  #register {
+    scroll-margin-top: 70px;
   }
 
   .footer {
