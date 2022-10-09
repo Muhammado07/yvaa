@@ -154,6 +154,22 @@
       padding-left: 15px;
       padding-right: 15px;
     }
+    .menu li {
+      text-align: left;
+      margin-left: 15px;
+     }
+     .menu li + li {
+      margin-top: 12px;
+     }
+     input[type=checkbox]:checked ~ .menu {
+      display: block;
+      position: fixed;
+      z-index: 99;
+      width: 100%;
+     }
+     .hamburger {
+      display: block;
+     }
    }
    /* Header */
 .yvaa-header {
@@ -590,12 +606,19 @@
 
 
   @media screen and (max-width: 991px) {
-    .yvaa-header .yvaa-only .img {
-      margin-left: 9%;
+    .yvaa-header {
+      height: 100%;
+    }
+    .yvaa-header .header {
+      padding-bottom: 50px;
+    }
+    .yvaa-header .yvaa-only {
+      display: none;
     }
     .features,
     .yvaa-section {
       width: 100%;
+      padding: 20px 0;
     }
     .features .header,
     .yvaa-section .section {
