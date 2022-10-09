@@ -12,7 +12,6 @@
       href="https://www.johnsoncontrols.com/-/media/jci/corp/homepage/images/jci.png"
       type="image/x-icon"
     />
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <link rel="stylesheet" href="style.css" />
     <!-- Primary Meta Tags -->
     <title>YVAA | Johnson Controls Arabia</title>
@@ -48,9 +47,6 @@
             </div>
             <!-- NAVIGATION MENU -->
             <ul class="nav-links">
-              <!-- USING CHECKBOX HACK -->
-              <input type="checkbox" id="checkbox_toggle" />
-              <label for="checkbox_toggle" class="hamburger">&#9776;</label>
               <!-- NAVIGATION MENUS -->
               <div class="menu">
                 <li>
@@ -67,7 +63,7 @@
       <div class="container">
         <div class="header">
           <div class="details">
-            <div class="side-info" data-aos="fade-down">
+            <div class="side-info">
               <div class="info">
                 <h1>YORK Model YVAA Air-Cooled Chillers</h1>
                 <h3>
@@ -79,7 +75,7 @@
                 </div>
               </div>
             </div>
-            <div class="yvaa-only" data-aos="fade-left">
+            <div class="yvaa-only">
               <div class="img">
                 <img
                   src="img/yvaa-only.png"
@@ -94,62 +90,60 @@
     <div class="yvaa-header features" id="register">
       <div class="container">
         <div class="header">
-          <div data-aos="fade-right">
+          <div>
             <h2 class="main-title">Key Benefits</h2>
             <div class="main-feature" id="counter">
               <div class="feature">
                 <div class="boxy">
-                  <div>
+                  <h3>Efficiency</h3>
+                </div>
+                <div class="details">
+                  <div class="per">
                     <p class="counter-value" data-count="50">0</p>
                     <span>%</span>
                   </div>
-                </div>
-                <div class="details">
-                  <h3>Efficiency</h3>
-                  <p>Annual energy costs</p>
+                  <p>Reduce annual energy costs</p>
                 </div>
               </div>
               <div class="feature">
                 <div class="boxy">
-                  <div>
-                    <p class="counter-value" data-count="360">0</p>
-                    <span>º</span>
-                  </div>
+                  <h3>Sustainability</h3>
                 </div>
                 <div class="details">
-                  <h2></h2>
-                  <h3>Sustainability</h3>
+                  <div class="per">
+                    <p class="counter-value" data-count="360">0</p>
+                    <span> º</span>
+                  </div>
                   <p>Sustainability from every angle</p>
                 </div>
               </div>
               <div class="feature">
                 <div class="boxy">
-                  <div>
-                    <p class="counter-value" data-count="16">0</p>
-                    <span> dBA</span>
-                  </div>
+                  <h3>Low sound</h3>
                 </div>
                 <div class="details">
-                  <h2></h2>
-                  <h3>Low sound</h3>
+                  <div class="per">
+                    <p class="counter-value" data-count="16">0</p>
+                    <span>dBA</span>
+                  </div>
                   <p>Noise reduction</p>
                 </div>
               </div>
               <div class="feature">
                 <div class="boxy">
-                  <div>
+                  <h3>Confidence</h3>
+                </div>
+                <div class="details">
+                  <div class="per">
                     <p class="counter-value" data-count="4">0</p>
                     <span> million tons</span>
                   </div>
-                </div>
-                <div class="details">
-                  <h3>Confidence</h3>
                   <p>Installed worldwide</p>
                 </div>
               </div>
             </div>
           </div>
-          <div class="side-form" data-aos="fade-left">
+          <div class="side-form">
             <div class="pop-content">
               <div class="formbox">
                 <form>
@@ -208,10 +202,10 @@
     <div class="yvaa-section">
       <div class="container">
         <div class="section">
-          <div class="side-img" data-aos="fade-right">
+          <div class="side-img">
             <img src="img/yvaa3.jpg" alt="YVAA Johnson Controls Arabia" />
           </div>
-          <div class="side-details" data-aos="fade-left">
+          <div class="side-details">
             <h2>Key technology elements of the system</h2>
             <div class="main-feature">
               <div class="feature">
@@ -288,9 +282,7 @@
       </div>
     </div>
     <script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
-      AOS.init();
       var a = 0;
       $(window).scroll(function () {
         var oTop = $("#counter").offset().top - window.innerHeight;

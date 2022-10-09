@@ -150,36 +150,13 @@
    }
    /* APPLYING MEDIA QUERIES */
    @media (max-width: 768px) {
-   .menu { 
-    display:none;
-    position: absolute;
-    background-color:var(--third-color);
-    right: 0;
-    left: 0;
-    top: 77px;
-    text-align: center;
-    padding: 16px 0;
-   }
-   .menu li {
-    text-align: left;
-    margin-left: 15px;
-   }
-   .menu li + li {
-    margin-top: 12px;
-   }
-   input[type=checkbox]:checked ~ .menu {
-    display: block;
-    position: fixed;
-    z-index: 99;
-    width: 100%;
-   }
-   .hamburger {
-    display: block;
-   }
+    .container {
+      padding-left: 15px;
+      padding-right: 15px;
+    }
    }
    /* Header */
 .yvaa-header {
-    /* background: url('img/yvaa-bg.png') center center no-repeat; */
     background: linear-gradient(72.85deg, #003594 0%, #0099BF 100%);
     background-size: cover;
     width: 100%;
@@ -189,7 +166,6 @@
     color: var(--third-color);
     font-family: "Maurea-Light";
     font-weight: 500;
-    /* background-color: var(--third-color); */
   }
   .yvaa-header .header {
     display: flex;
@@ -208,10 +184,10 @@
     position: absolute;
     top: 5%;
     bottom: -15%;
-    right: -2%;
+    right: 0;
   }
   .yvaa-header .yvaa-only .img {
-    width: 850px;
+    width: 100%;
     height: 100%;
   }
   .yvaa-header .yvaa-only .img img {
@@ -243,7 +219,7 @@
   margin-top: 60px;
 }
 .yvaa-header .details .side-info .info .download a {
-  background: #00B5E2;
+  background-color: var(--fourth-color);
   padding: 20px 30px;
   font-family: "Maurea-BoldLf";
   font-weight: 500;
@@ -253,11 +229,11 @@
   border-radius: 4px;
 }
 .yvaa-header .details .side-info .info .download a:hover {
-  background-color: var(--fourth-color);
+  opacity: 0.9;
 }
 
   @media screen and (max-width: 991px) {
-    .yvaa-header {
+    .yvaa-header .header {
       height: 100%;
       padding-bottom: 30px;
     }
@@ -273,6 +249,9 @@
         width: 100%;
         font-size: 18px;
     }
+    .yvaa-header .yvaa-only {
+      position: inherit;
+    }
 }
 @media screen and (max-width: 480px) {
     .yvaa-header .details .side-info .info h1 {
@@ -287,7 +266,7 @@
 
   .side-form {
     background: var(--third-color);
-    width: 70%;
+    width: 85%;
     margin: 0 auto;
     border: 1px solid #e1e1e1;
     border-radius: 24px;
@@ -426,9 +405,9 @@
   }
   .features .header {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 3fr 2fr;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
     gap: 32px;
   }
   .features .main-title {
@@ -437,24 +416,21 @@
   }
   .features .main-feature {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
     justify-content: center;
     align-items: center;
-    text-align: left;
-    gap: 45px;
-  }
-  .yvaa-header.features .details {
-    padding-top: 0;
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    flex-direction: column;
+    text-align: center;
+    gap: 16px;
   }
   .features .main-feature .feature {
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    gap: 16px;
+    flex-direction: column;
+    background: var(--third-color);
+    height: 300px;
+    box-shadow: 0px 8px 16px -4px rgb(21 21 21 / 10%);
+    border-radius: 4px;
   }
   .features .main-feature .feature .img {
     width: 100px;
@@ -465,32 +441,55 @@
     height: 100%;
   }
   .features .main-feature .feature .boxy {
-    width: 100px;
-    height: 100px;
-    background: #F5FAFF;
-    box-shadow: 0px 8px 16px -4px rgba(21, 21, 21, 0.1);
-    border-radius: 16px;
+    width: 100%;
+    height: 80px;
+    background: #00B5E2;
+    color: var(--third-color);
+    border-radius: 4px 4px 0 0;
     display: flex;
     justify-items: center;
     align-items: center;
     text-align: center;
     padding: 5px;
   }
-  .features .main-feature .feature .boxy > div {
+  .features .main-feature .feature:nth-child(even) .boxy {
+    background: #6AC07A;
+  }
+  .features .main-feature .feature .boxy h3 {
+    text-align: center;
+    margin: 0 auto;
+    font-size: 22px;
+  }
+  .yvaa-header.features .details {
+    padding: 40px 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    gap: 16px;
+  }
+  .yvaa-header.features .details p {
+    font-size: 18px;
+    padding: 0 10px;
+  }
+  .yvaa-header.features .details .per {
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
   }
-  .features .main-feature .feature:last-child .boxy > div {
-    flex-direction: column;
-  }
-  .features .main-feature .feature .boxy p,
-  .features .main-feature .feature .boxy span {
-    text-align: center;
+  .yvaa-header.features .details .per p {
+    font-size: 48px;
     font-family: "Maurea-BoldLf";
     font-weight: 600;
+    padding-right: 4px;
+  }
+  .yvaa-header.features .details .per span {
     font-size: 20px;
+    font-family: "Maurea-Light";
+    font-weight: 500;
   }
   .features .main-feature .feature .details h2 {
     font-size: 32px;
@@ -500,11 +499,6 @@
   .features .main-feature .feature .details h3 {
     font-size: 20px;
     padding: 0 0 5px;
-  }
-  .features .main-feature .feature .details p {
-    font-family: "Maurea-Light";
-    font-weight: 500;
-    font-size: 16px;
   }
   
   /* YVAA Section */
@@ -592,4 +586,25 @@
   .footer .footy p {
     font-size: 14px;
     text-align: center;
+  }
+
+
+  @media screen and (max-width: 991px) {
+    .yvaa-header .yvaa-only .img {
+      margin-left: 9%;
+    }
+    .features,
+    .yvaa-section {
+      width: 100%;
+    }
+    .features .header,
+    .yvaa-section .section {
+      grid-template-columns: 1fr;
+    }
+    .side-form {
+      order: -1;
+    }
+    .yvaa-section .section h2 {
+      font-size: 26px;
+    }
   }
