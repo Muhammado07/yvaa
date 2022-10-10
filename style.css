@@ -206,6 +206,9 @@
     width: 100%;
     height: 100%;
   }
+  .yvaa-header .yvaa-only .img .yvaa-mob {
+    display: none;
+  }
   .yvaa-header .yvaa-only .img img {
     width: 100%;
     height: 100%;
@@ -618,8 +621,11 @@
     .yvaa-header .header {
       padding-bottom: 50px;
     }
-    .yvaa-header .yvaa-only {
+    .yvaa-header .yvaa-only .img .yvaa-desk {
       display: none;
+    }
+    .yvaa-header .yvaa-only .img .yvaa-mob {
+      display: block;
     }
     .features,
     .yvaa-section {
