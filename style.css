@@ -111,7 +111,7 @@
    }
    /* LOGO */
    .logo {
-    width: 300px;
+    width: 121px;
     height: auto;
    }
    .logo img {
@@ -150,9 +150,6 @@
    }
    /* APPLYING MEDIA QUERIES */
    @media (max-width: 768px) {
-    .logo {
-      width: 200px;
-    }
     .container {
       padding-left: 15px;
       padding-right: 15px;
@@ -228,6 +225,9 @@
     padding-bottom: 10px;
     font-family: "Maurea-BoldLf";
 }
+  .yvaa-header .details .side-info .info img {
+  width: 200px;
+  }
 .yvaa-header .details .side-info .info h3 {
     color: var(--third-color);
     font-size: 22px;
@@ -262,10 +262,10 @@
     .yvaa-header .details {
       grid-template-columns: 1fr;
       grid-row-gap: 30px;
-      padding-top: 100px;
+      padding-top: 140px;
     }
     .yvaa-header .details .side-info .info h1 {
-        font-size: 32px;
+        font-size: 36px;
     }
     .yvaa-header .details .side-info .info h4 {
         width: 100%;
@@ -274,16 +274,22 @@
     .yvaa-header .yvaa-only {
       position: inherit;
     }
+    .yvaa-header .details .side-info .info img {
+      width: 120px;
+      }
 }
 @media screen and (max-width: 480px) {
     .yvaa-header .details .side-info .info h1 {
-      font-size: 24px;
+      font-size: 36px;
     }
   }
   @media screen and (max-width: 360px) {
     .yvaa-header .details .side-info .info h1 {
-      font-size: 28px;
+      font-size: 26px;
     }
+    .yvaa-header .details .side-info .info img {
+      width: 100px;
+      }
   }
 
   .side-form {
@@ -678,7 +684,7 @@
   }
   @media screen and (max-width: 340px) {
     .navbar .logo {
-      width: 130px;
+      width: 90px;
     }
     .navbar .menu li:last-child a {
       font-size: 14px;
