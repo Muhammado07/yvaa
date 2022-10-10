@@ -669,9 +669,6 @@
     .side-form {
       order: -1;
     }
-    .yvaa-section .section h2 {
-      font-size: 26px;
-    }
     .features .main-feature .feature {
       height: 100%;
     }
@@ -699,6 +696,10 @@
     }
     .yvaa-section .section .main-feature .feature .details p {
       font-size: 14px;
+    }
+    .features .main-title,
+    .yvaa-section .section h2 {
+      font-size: 36px;
     }
   }
   @media screen and (max-width: 340px) {
