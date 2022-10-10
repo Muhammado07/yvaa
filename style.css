@@ -188,6 +188,7 @@
     justify-content: center;
     align-items: center;
     height: 85vh;
+    padding-top: 60px;
   }
   .yvaa-header .details {
     display: grid;
@@ -198,13 +199,14 @@
   }
   .yvaa-header .yvaa-only {
     position: absolute;
-    top: 5%;
-    bottom: -15%;
+    bottom: -10%;
+    width: 57%;
     right: 0;
   }
   .yvaa-header .yvaa-only .img {
-    width: 100%;
+    width: 60%;
     height: 100%;
+    margin: 0 auto;
   }
   .yvaa-header .yvaa-only .img .yvaa-mob {
     display: none;
@@ -262,7 +264,7 @@
     .yvaa-header .details {
       grid-template-columns: 1fr;
       grid-row-gap: 30px;
-      padding-top: 140px;
+      padding-top: 80px;
     }
     .yvaa-header .details .side-info .info h1 {
         font-size: 36px;
@@ -273,9 +275,14 @@
     }
     .yvaa-header .yvaa-only {
       position: inherit;
+      width: 100%;
     }
     .yvaa-header .details .side-info .info img {
       width: 120px;
+      }
+      .yvaa-header .details .side-info .info .download {
+        margin-top: 30px;
+        margin-bottom: 30px;
       }
 }
 @media screen and (max-width: 480px) {
@@ -519,9 +526,10 @@
     font-family: "Maurea-BoldLf";
     font-weight: 600;
     padding-right: 4px;
+    padding-left: 4px;
   }
   .yvaa-header.features .details .per span {
-    font-size: 20px;
+    font-size: 14px;
     font-family: "Maurea-Light";
     font-weight: 500;
   }
