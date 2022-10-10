@@ -111,7 +111,7 @@
    }
    /* LOGO */
    .logo {
-    width: 121px;
+    width: 300px;
     height: auto;
    }
    .logo img {
@@ -150,6 +150,9 @@
    }
    /* APPLYING MEDIA QUERIES */
    @media (max-width: 768px) {
+    .logo {
+      width: 200px;
+    }
     .container {
       padding-left: 15px;
       padding-right: 15px;
@@ -614,7 +617,8 @@
       line-height: 0;
     }
     .navbar .menu li:last-child a {
-      padding: 10px;
+      padding: 10px 12px;
+      font-size: 14px;
     }
     .yvaa-header {
       height: 100%;
@@ -674,7 +678,7 @@
   }
   @media screen and (max-width: 340px) {
     .navbar .logo {
-      width: 90px;
+      width: 130px;
     }
     .navbar .menu li:last-child a {
       font-size: 14px;
