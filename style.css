@@ -72,7 +72,7 @@
     padding-left: 70px;
     margin-right: auto;
     margin-left: auto;
-    position: relative;
+    /* position: relative; */
     max-width: 1920px;
     margin: auto;
   }
@@ -274,7 +274,7 @@
         font-size: 18px;
     }
     .yvaa-header .yvaa-only {
-      position: inherit;
+      position: absolute;
       width: 100%;
     }
     .yvaa-header .details .side-info .info img {
@@ -645,9 +645,9 @@
       padding: 10px 12px;
       font-size: 14px;
     }
-    .yvaa-header {
+    /* .yvaa-header {
       height: 100%;
-    }
+    } */
     .yvaa-header .header {
       padding-bottom: 0;
     }
@@ -714,5 +714,13 @@
     }
     .features .main-feature {
       grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    }
+    .yvaa-header {
+      height: 110vh;
+    }
+  }
+  @media screen and (max-width: 415px) and (min-width: 376px)   {
+    .yvaa-header {
+      height: 80vh;
     }
   }
