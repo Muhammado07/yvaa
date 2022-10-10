@@ -416,7 +416,7 @@
 
   /* Features */
   .features {
-    padding: 100px 0 0;
+    padding: 100px 0 40px;
     background: #fbfbfb;
     position: relative;
     color: var(--second-color);
@@ -426,8 +426,9 @@
     display: grid;
     grid-template-columns: 3fr 2fr;
     justify-content: center;
-    align-items: flex-start;
+    align-items: center;
     gap: 32px;
+    height: 100%;
   }
   .features .main-title {
     font-size: 42px;
