@@ -255,11 +255,30 @@
 .yvaa-header .details .side-info .info .download a:hover {
   opacity: 0.9;
 }
+.yvaa-header.thankyou {
+  height: 90vh;
+}
+.yvaa-header.thankyou .details {
+  grid-template-columns: 1fr;
+}
+.yvaa-header.thankyou .details .info {
+  text-align: center;
+}
 
   @media screen and (max-width: 991px) {
     .yvaa-header .header {
       height: 100%;
       padding-bottom: 30px;
+    }
+    .yvaa-header.thankyou .header {
+      justify-content: center;
+    align-items: center;
+    padding-top: 0;
+    }
+    .yvaa-header.thankyou .details {
+      height: 90vh;
+      padding-top: 0;
+      gap: 0;
     }
     .yvaa-header .details {
       grid-template-columns: 1fr;
@@ -296,6 +315,9 @@
     }
     .yvaa-header .details .side-info .info img {
       width: 100px;
+      }
+      .yvaa-header.thankyou .details .side-info .info h3 {
+        font-size: 18px;
       }
   }
 
